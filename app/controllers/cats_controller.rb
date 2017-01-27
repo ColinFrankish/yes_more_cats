@@ -5,7 +5,7 @@ class CatsController < ApplicationController
   end
 
   def new
-
+    @cat = Cat.new
   end
 
 end
