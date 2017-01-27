@@ -1,2 +1,9 @@
-<h1> I'm gonna create new cats in here </h1>  
-<h2> Again, this will obviously work first time.... </h2>
+<h1> Create your next utter bastard of a feline</h1>
+</br>
+<section>
+  <%= simple_form_for @cat do |form| %>
+    Name: <%=  form.text_field :name %></br>
+    Description: <%= form.text_field :description %></br>
+    Save the Bastard! <%= form.submit %>
+  <% end %>
+</section>
