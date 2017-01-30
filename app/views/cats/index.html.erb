@@ -4,6 +4,7 @@
   <% @cats.each do |cat| %>
     <%= cat.name %> - - 
     <%= cat.description %></br>
+    <%= link_to "Show me this so called cat.", cat_path(cat.id) %>
     <%= link_to "Annihilate this moggy", cat_path(cat.id), method: :delete %><br />
     ------------------------------------<br />
   <% end %>
