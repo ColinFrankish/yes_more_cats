@@ -1,1 +1,9 @@
-<h1> With a bit of luck, I will be on the screen</h1>
+<h1> My fabulous list of all the cats</h1>
+</br>
+<section>
+  <% @cats.each do |cat| %>
+    <%= cat.name %> - - 
+    <%= cat.description %></br>
+  <% end %>
+  <%= link_to "Create a new Cat", new_cat_path %>
+</section>
