@@ -21,6 +21,10 @@ class CatsController < ApplicationController
     @cat = Cat.find(params[:id])
   end
 
+  def edit
+    @cat = Cat.find(params[:id])
+  end
+
   def destroy
     @cat = Cat.find(params[:id])
     @cat.destroy!
