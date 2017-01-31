@@ -17,7 +17,7 @@ Move the HEAD to the first commit, which is an empty Rails 5.0 app:
 **git checkout commit-ref-of-demo-start**
 
 Run:
-**git config --global alias.next '!git checkout `` `git rev-list HEAD..demo-end | tail -1` ``'**
+**git config --global alias.next '!git checkout \`git rev-list HEAD..demo-end | tail -1\`'**
 
 You are now at the beginning of your demo and can move through the commits, running
 migrations etc as needed from the command line to build the app.
