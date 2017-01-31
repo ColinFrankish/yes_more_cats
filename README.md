@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Step by step commits for an talk on Rails for a group of non-Ruby developers. 
 
-Things you may want to cover:
+Using git to create a 'slide show' to capture the changing state of the app.
+Git tags used at the beginning and end of the demo. 
+Pull down the repo onto a new machine (or delete the DB and folder completely from existing machine
+and re clone, we need to start with a 'blank canvas')
 
-* Ruby version
+If additional tags are needed add a tag to a specific commit:
+** git tag tag-message commit-ref **
 
-* System dependencies
+To show one line commit history including tags:
+** git log --oneline --decorate **
 
-* Configuration
+Move the HEAD to the first commit, which is an empty Rails 5.0 app:
+** git checkout commit-ref-of-demo-start **
 
-* Database creation
+Run:
+** git config --global alias.next '!git checkout `git rev-list HEAD..demo-end | tail -1`' **
 
-* Database initialization
+You are now at the beginning of your demo and can move through the commits, running
+migrations etc as needed from the command line to build the app.
+use ** git next ** to move through the commits
 
-* How to run the test suite
+To return to the last commit use
+** git checkout master **    (or name of branch if not master!!)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
